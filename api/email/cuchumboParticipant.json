@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "CuchumboParticipant",
+    "SubjectPart": "Cuchumbo!",
+    "HtmlPart": "<h1>🎁 Cuchumbo! 🎉</h1><p>Hi there {{giverName}},<br>You have drawn {{receiverName}} for cuchumbo!<br><br>The price limit for your gift to them is $50. Happy shopping!<br><br>🙅 no sharing please 👀</p>",
+    "TextPart": "Hi there {{giverName}},\r\nYou have drawn {{receiverName}} for cuchumbo!\r\nThe price limit for your gift to them is $50. Happy shopping!"
+  }
+}

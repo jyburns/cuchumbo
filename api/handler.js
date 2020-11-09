@@ -1,18 +1,44 @@
 'use strict';
 
-module.exports.hello = async event => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: 'Go Serverless v1.0! Your function executed successfully!',
-        input: event,
+const aws = require('aws-sdk');
+const ses = new aws.SES({region: 'us-east-1'});
+const seedrandom = require('seedrandom');
+const cuchumbo = require('./lib/cuchumbo');
+
+module.exports.create = async (event, context) => {
+
+  const superSecretSecret = process.env.SEED_SALT;
+  const notSecretRequestId = context.awsRequestId;
+  const rng = seedrandom(superSecretSecret + notSecretRequestId);
+
+  const requestParticipants = JSON.parse(event.body);
+
+  console.log('requestData', {...requestParticipants, requestId: notSecretRequestId});
+
+  const cuchumboDraw = cuchumbo.generateCuchumbo(rng, familyParticipants);
+
+  const bulkDestinations = cuchumboDraw.map((drawing) => {
+    return {
+      Destination: {
+        ToAddresses: [
+          drawing.sendTo
+        ]
       },
-      null,
-      2
-    ),
+      ReplacementTemplateData: JSON.stringify({giverName: drawing.sendToName, receiverName: drawing.targetName})
+    }
+  });
+
+  var params = {
+    Destinations: bulkDestinations,
+    Source: 'Cuchumbo <mail@cuchumbo.io>',
+    Template: 'CuchumboParticipant',
+    DefaultTemplateData: JSON.stringify({ giverName: "friend", targetName: "unknown" })
   };
 
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
+  await ses.sendBulkTemplatedEmail(params).promise();
+
+  return JSON.stringify({
+    message: JSON.stringify({requestId: notSecretRequestId}),
+    input: event,
+  });
 };

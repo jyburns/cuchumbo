@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`builds participant map 1`] = `
+Map {
+  "a@example.com" => "a",
+  "b@example.com" => "b",
+  "c@example.com" => "c",
+  "d@example.com" => "d",
+}
+`;
+
+exports[`builds result object from participant map 1`] = `
+Array [
+  Object {
+    "sendTo": "a@example.com",
+    "sendToName": "a",
+    "targetEmail": "b@example.com",
+    "targetName": "b",
+  },
+  Object {
+    "sendTo": "b@example.com",
+    "sendToName": "b",
+    "targetEmail": "a@example.com",
+    "targetName": "a",
+  },
+  Object {
+    "sendTo": "c@example.com",
+    "sendToName": "c",
+    "targetEmail": "d@example.com",
+    "targetName": "d",
+  },
+  Object {
+    "sendTo": "d@example.com",
+    "sendToName": "d",
+    "targetEmail": "c@example.com",
+    "targetName": "c",
+  },
+]
+`;
+
+exports[`generate cuchumbo is a pure function 1`] = `
+Array [
+  Object {
+    "sendTo": "a@example.com",
+    "sendToName": "a",
+    "targetEmail": "d@example.com",
+    "targetName": "d",
+  },
+  Object {
+    "sendTo": "b@example.com",
+    "sendToName": "b",
+    "targetEmail": "c@example.com",
+    "targetName": "c",
+  },
+  Object {
+    "sendTo": "c@example.com",
+    "sendToName": "c",
+    "targetEmail": "b@example.com",
+    "targetName": "b",
+  },
+  Object {
+    "sendTo": "d@example.com",
+    "sendToName": "d",
+    "targetEmail": "a@example.com",
+    "targetName": "a",
+  },
+]
+`;
+
+exports[`generate cuchumbo matches snapshot battery 1`] = `
+Array [
+  Object {
+    "sendTo": "a@example.com",
+    "sendToName": "a",
+    "targetEmail": "d@example.com",
+    "targetName": "d",
+  },
+  Object {
+    "sendTo": "b@example.com",
+    "sendToName": "b",
+    "targetEmail": "c@example.com",
+    "targetName": "c",
+  },
+  Object {
+    "sendTo": "c@example.com",
+    "sendToName": "c",
+    "targetEmail": "b@example.com",
+    "targetName": "b",
+  },
+  Object {
+    "sendTo": "d@example.com",
+    "sendToName": "d",
+    "targetEmail": "a@example.com",
+    "targetName": "a",
+  },
+]
+`;
+
+exports[`generate cuchumbo matches snapshot battery 2`] = `
+Array [
+  Object {
+    "sendTo": "a@example.com",
+    "sendToName": "a",
+    "targetEmail": "d@example.com",
+    "targetName": "d",
+  },
+  Object {
+    "sendTo": "b@example.com",
+    "sendToName": "b",
+    "targetEmail": "c@example.com",
+    "targetName": "c",
+  },
+  Object {
+    "sendTo": "c@example.com",
+    "sendToName": "c",
+    "targetEmail": "b@example.com",
+    "targetName": "b",
+  },
+  Object {
+    "sendTo": "d@example.com",
+    "sendToName": "d",
+    "targetEmail": "a@example.com",
+    "targetName": "a",
+  },
+]
+`;
+
+exports[`generate cuchumbo matches snapshot battery 3`] = `
+Array [
+  Object {
+    "sendTo": "a@example.com",
+    "sendToName": "a",
+    "targetEmail": "c@example.com",
+    "targetName": "c",
+  },
+  Object {
+    "sendTo": "b@example.com",
+    "sendToName": "b",
+    "targetEmail": "d@example.com",
+    "targetName": "d",
+  },
+  Object {
+    "sendTo": "c@example.com",
+    "sendToName": "c",
+    "targetEmail": "b@example.com",
+    "targetName": "b",
+  },
+  Object {
+    "sendTo": "d@example.com",
+    "sendToName": "d",
+    "targetEmail": "a@example.com",
+    "targetName": "a",
+  },
+]
+`;
+
+exports[`generate cuchumbo matches snapshot battery 4`] = `
+Array [
+  Object {
+    "sendTo": "a@example.com",
+    "sendToName": "a",
+    "targetEmail": "d@example.com",
+    "targetName": "d",
+  },
+  Object {
+    "sendTo": "b@example.com",
+    "sendToName": "b",
+    "targetEmail": "c@example.com",
+    "targetName": "c",
+  },
+  Object {
+    "sendTo": "c@example.com",
+    "sendToName": "c",
+    "targetEmail": "b@example.com",
+    "targetName": "b",
+  },
+  Object {
+    "sendTo": "d@example.com",
+    "sendToName": "d",
+    "targetEmail": "a@example.com",
+    "targetName": "a",
+  },
+]
+`;
+
+exports[`generate cuchumbo matches snapshot battery 5`] = `
+Array [
+  Object {
+    "sendTo": "a@example.com",
+    "sendToName": "a",
+    "targetEmail": "d@example.com",
+    "targetName": "d",
+  },
+  Object {
+    "sendTo": "b@example.com",
+    "sendToName": "b",
+    "targetEmail": "a@example.com",
+    "targetName": "a",
+  },
+  Object {
+    "sendTo": "c@example.com",
+    "sendToName": "c",
+    "targetEmail": "b@example.com",
+    "targetName": "b",
+  },
+  Object {
+    "sendTo": "d@example.com",
+    "sendToName": "d",
+    "targetEmail": "c@example.com",
+    "targetName": "c",
+  },
+]
+`;
+
+exports[`generates all viable cuchumbos given a data set 1`] = `
+Set {
+  "[[\\"a@example.com\\",\\"d@example.com\\"],[\\"b@example.com\\",\\"c@example.com\\"],[\\"c@example.com\\",\\"b@example.com\\"],[\\"d@example.com\\",\\"a@example.com\\"]]",
+  "[[\\"a@example.com\\",\\"c@example.com\\"],[\\"b@example.com\\",\\"d@example.com\\"],[\\"c@example.com\\",\\"b@example.com\\"],[\\"d@example.com\\",\\"a@example.com\\"]]",
+  "[[\\"a@example.com\\",\\"d@example.com\\"],[\\"b@example.com\\",\\"a@example.com\\"],[\\"c@example.com\\",\\"b@example.com\\"],[\\"d@example.com\\",\\"c@example.com\\"]]",
+}
+`;
+
+exports[`sorts participants alphabetically by email second 1`] = `
+Array [
+  Object {
+    "email": "b@example.com",
+    "exclusions": Set {},
+    "name": "b",
+  },
+  Object {
+    "email": "d@example.com",
+    "exclusions": Set {},
+    "name": "d",
+  },
+  Object {
+    "email": "a@example.com",
+    "exclusions": Set {
+      "b@example.com",
+    },
+    "name": "a",
+  },
+  Object {
+    "email": "c@example.com",
+    "exclusions": Set {
+      "a@example.com",
+      "d@example.com",
+    },
+    "name": "c",
+  },
+]
+`;
+
+exports[`sorts participants by exclusion size first 1`] = `
+Array [
+  Object {
+    "email": "b@example.com",
+    "exclusions": Set {},
+    "name": "b",
+  },
+  Object {
+    "email": "d@example.com",
+    "exclusions": Set {},
+    "name": "d",
+  },
+  Object {
+    "email": "a@example.com",
+    "exclusions": Set {
+      "b@example.com",
+    },
+    "name": "a",
+  },
+  Object {
+    "email": "c@example.com",
+    "exclusions": Set {
+      "a@example.com",
+      "d@example.com",
+    },
+    "name": "c",
+  },
+]
+`;
+
+exports[`throw when there are no viable solutions 1`] = `"no combinations exist with the given the constraints"`;
+
+exports[`throw when there are over maximum participants 1`] = `"too many participants, max is 9"`;

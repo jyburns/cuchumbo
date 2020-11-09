@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1604944503522" clover="3.2.0">
+  <project timestamp="1604944503522" name="All files">
+    <metrics statements="60" coveredstatements="60" conditionals="12" coveredconditionals="12" methods="19" coveredmethods="19" elements="91" coveredelements="91" complexity="0" loc="60" ncloc="60" packages="1" files="2" classes="2"/>
+    <file name="cuchumbo.js" path="/Users/jeffburns/Projects/cuchumbo/api/lib/cuchumbo.js">
+      <metrics statements="53" coveredstatements="53" conditionals="12" coveredconditionals="12" methods="15" coveredmethods="15"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="8" count="10" type="stmt"/>
+      <line num="9" count="10" type="stmt"/>
+      <line num="10" count="45" type="stmt"/>
+      <line num="11" count="10" type="stmt"/>
+      <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="9" type="stmt"/>
+      <line num="16" count="9" type="stmt"/>
+      <line num="18" count="9" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="22" count="13" type="stmt"/>
+      <line num="23" count="57" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="12" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="36" count="61" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="42" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="19" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="43" count="11" type="stmt"/>
+      <line num="45" count="49" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="54" count="9" type="stmt"/>
+      <line num="56" count="9" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="60" count="10" type="stmt"/>
+      <line num="61" count="45" type="stmt"/>
+      <line num="71" count="1" type="stmt"/>
+      <line num="72" count="11" type="stmt"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="76" count="272419" type="stmt"/>
+      <line num="77" count="272419" type="stmt"/>
+      <line num="78" count="272419" type="stmt"/>
+      <line num="80" count="272419" type="cond" truecount="2" falsecount="0"/>
+      <line num="82" count="257583" type="cond" truecount="2" falsecount="0"/>
+      <line num="83" count="133523" type="stmt"/>
+      <line num="85" count="133523" type="stmt"/>
+      <line num="87" count="133523" type="stmt"/>
+      <line num="89" count="133523" type="stmt"/>
+      <line num="92" count="124060" type="stmt"/>
+      <line num="93" count="272408" type="stmt"/>
+      <line num="94" count="272408" type="stmt"/>
+      <line num="96" count="272408" type="stmt"/>
+      <line num="97" count="272408" type="stmt"/>
+      <line num="99" count="272408" type="stmt"/>
+      <line num="101" count="272408" type="stmt"/>
+      <line num="104" count="124060" type="stmt"/>
+      <line num="107" count="1" type="stmt"/>
+      <line num="108" count="133523" type="stmt"/>
+      <line num="113" count="1" type="stmt"/>
+    </file>
+    <file name="setUtils.js" path="/Users/jeffburns/Projects/cuchumbo/api/lib/setUtils.js">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="2" count="451738" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="272409" type="stmt"/>
+      <line num="8" count="1068051" type="stmt"/>
+      <line num="10" count="272409" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
