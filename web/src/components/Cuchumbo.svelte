@@ -5,12 +5,15 @@
   import PlusIcon from './icons/PlusIcon.svelte';
   import MinusIcon from './icons/MinusIcon.svelte';
 
+  const MAX_PARTICIPANTS = 8;
+
   const housekeeping = "Way to take charge and organize a cuchumbo, let us know who's leading the pack:";
   const includeYourself = "Include yourself in the cuchumbo?";
   const namePlaceholder = "Name";
   const emailPlaceholder = "Email";
   const addTheNames = "Add the names and email addresses of any other participants below:";
   const cuchumbo = "Cuchumbo!";
+  const maxParticipantsReached = "Sorry, only exchanges of up to " + MAX_PARTICIPANTS + " external participants are currently supported";
 
   let organizerName = "";
   let organizerEmail = "";
@@ -129,13 +132,13 @@
           <input bind:value={participant.name}
                  class="text-input"
                  class:invalid={(currentParticipant === participant) && !isCurrentParticipantNameValid}
-                 disabled={currentParticipant !== participant}
+                 disabled={(currentParticipant !== participant) || index >= MAX_PARTICIPANTS}
                  placeholder={namePlaceholder}
                  on:keyup={() => validateParticipantName(participant.name)}/>
           <input bind:value={participant.email}
                  class="text-input"
                  class:invalid={(currentParticipant === participant) && !isCurrentParticipantEmailValid}
-                 disabled={currentParticipant !== participant}
+                 disabled={(currentParticipant !== participant) || index >= MAX_PARTICIPANTS}
                  placeholder={emailPlaceholder}
                  on:keyup={() => validateParticipantEmail(participant.email)}/>
         </form>
@@ -154,6 +157,9 @@
       </div>
     {/each}
   </div>
+  {#if participants.length > MAX_PARTICIPANTS}
+    <p class="warning">{maxParticipantsReached}</p>
+  {/if}
   <button class="submit"
           disabled={!isValidCuchumbo || success}
           on:click={submitCuchumbo}>
@@ -296,6 +302,10 @@
     position: absolute;
     right: -45px;
     width: 35px;
+  }
+
+  .warning {
+    color: var(--error-color);
   }
 
   .submit {
